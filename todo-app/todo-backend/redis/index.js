@@ -21,7 +21,11 @@ if (!REDIS_URL) {
   setAsync = promisify(client.set).bind(client)    
 }
 
+const counterKey = "counter";
+
 module.exports = {
   getAsync,
-  setAsync
-}
+  setAsync,
+  counterKey,
+};
+
