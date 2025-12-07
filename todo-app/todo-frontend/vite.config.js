@@ -7,4 +7,7 @@ export default defineConfig({
   test: {
     exclude: ["**/*.test.jsx", "**/node_modules/**", "**/.git/**"],
   },
+  server: {
+    allowedHosts: ["frontend", "app"],
+  },
 });
