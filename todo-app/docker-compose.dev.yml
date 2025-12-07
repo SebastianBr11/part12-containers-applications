@@ -12,6 +12,8 @@ services:
     extends:
       file: ./todo-frontend/docker-compose.dev.yml
       service: app
+    environment:
+      - VITE_BACKEND_URL=http://localhost:8080/api/
   backend:
     extends:
       file: ./todo-backend/docker-compose.dev.yml
