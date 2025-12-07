@@ -4,7 +4,8 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ENV VITE_BACKEND_URL="http://localhost:3000"
+ARG BACKEND_URL
+ENV VITE_BACKEND_URL=$BACKEND_URL
 
 RUN npm ci --include dev
 
